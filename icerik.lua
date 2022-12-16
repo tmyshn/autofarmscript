@@ -59,13 +59,12 @@ end
 
 
 
-
 local ucuncuasama=Player.PlayerGui:FindFirstChild("DialogApp")
 local ucuncuasamaiki=ucuncuasama:WaitForChild("Dialog").GamepassDialog.Buttons.ButtonTemplate
 
 repeat
     wait()
-    print "calisiyorhala1"
+    print("calisiyorhala1")
     if ucuncuasamaiki.Visible then 
         for i,v in pairs(getconnections(ucuncuasamaiki.MouseButton1Click)) do
             v:Fire()
