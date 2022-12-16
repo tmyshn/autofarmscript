@@ -509,7 +509,7 @@ local Section4 = Tab2:CreateSection("Background")
 
 -------------
 local BabyToggle = Section1:CreateToggle("AutoFarm Baby", Settings.BabyFarm, function(State)
-Settings.BabyFarm = State
+Settings.BabyFarm = true
 spawn(function()
 if Settings.BabyFarm then
     ReplicatedStorage.API["TeamAPI/ChooseTeam"]:InvokeServer("Babies", true)
@@ -534,13 +534,6 @@ spawn(function()
 end)
 end)
 
-spawn(function ()
-    print("ilkgiris")
-    wait(5)
-    print("girdi")
-    Settings.BabyFarm=true
-
-end)
 
 
 
