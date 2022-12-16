@@ -1104,7 +1104,7 @@ spawn(
 
 end)
 
-local Toggle434 = Section1:CreateToggle("Ginger Bread Farm", true, function(State)
+local Toggle434 = Section1:CreateToggle("Ginger Bread Farm", Settings.Start, function(State)
 Settings.Start = State
 spawn(function()
     while wait() and Settings.Start do
