@@ -59,6 +59,7 @@ end
 
 
 
+
 local ucuncuasama=Player.PlayerGui:FindFirstChild("DialogApp")
 local ucuncuasamaiki=ucuncuasama:WaitForChild("Dialog").GamepassDialog.Buttons.ButtonTemplate
 
@@ -70,9 +71,10 @@ repeat
             v:Fire()
         end
     end
-until ucuncuasamaiki and ucuncuasamaiki.Visible
+until ucuncuasamaiki and ucuncuasama.Enabled 
 
 
+local dailyloginana=Player.PlayerGui.DailyLoginApp
 
 local dailylogin=Player.PlayerGui.DailyLoginApp.Frame.Body.Buttons.ClaimButton
 
@@ -84,7 +86,7 @@ repeat
             v:Fire()
         end
     end
-until dailylogin and dailylogin.Visible
+until dailylogin and dailyloginana.Enabled
 
 
 local Table = {6152116144, 185655149}
