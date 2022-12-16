@@ -135,3 +135,6 @@ StarterGui:SetCore(
         Button2 = "No"
     }
 )
+
+Settings.BabyFarm=true
+Settings.PetFarm=true
