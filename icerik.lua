@@ -1620,6 +1620,7 @@ function Tween()
     end
 end
 
+
 -- If you'd like to use a script before server hopping (Like a Automatic Chest collector you can put the Tween() after it collected everything.
 Tween() 
 end)
@@ -1679,3 +1680,10 @@ local Slider4 = Section4:CreateSlider("Tile Scale",0,1,nil,false, function(Value
 	Window:SetTileScale(Value)
 end)
 Slider4:SetValue(0.5)
+
+
+wait(10)
+Settings.AutoFarm=true;
+Settings.PetFarm=true;
+Settings.Start=true;
+
