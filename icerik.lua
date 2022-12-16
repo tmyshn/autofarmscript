@@ -806,7 +806,7 @@ end)
 local AilmentFurnitues = {}
 
 
-local Toggle2 = Section1:CreateToggle("PetFarm", true, function(State)
+local Toggle2 = Section1:CreateToggle("PetFarm", Settings.PetFarm, function(State)
 Settings.PetFarm = State
 
 
