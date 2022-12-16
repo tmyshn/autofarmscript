@@ -755,12 +755,12 @@ local AilmentFurnitues = {}
 
 
 local Toggle2 = Section1:CreateToggle("PetFarm", Settings.PetFarm, function(State)
-Settings.PetFarm = State
+Settings.PetFarm = true
 
 
 RunService.RenderStepped:connect(
     function()
-        print(State)
+      
         if Settings.PetFarm then
             pcall(function()
                 Player.Character.Humanoid:ChangeState(11)
