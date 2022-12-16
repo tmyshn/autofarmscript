@@ -83,12 +83,7 @@ local function Save()
     writefile("V.G Hub//" .. Name, HttpService:JSONEncode(Settings))
 end
 
-wait(5)
-Settings.AutoFarm=true;
-wait(5)
-Settings.PetFarm=true;
-wait(5)
-Settings.Start=true;
+
 
 StarterGui:SetCore(
     "SendNotification",
@@ -761,6 +756,7 @@ local AilmentFurnitues = {}
 
 local Toggle2 = Section1:CreateToggle("PetFarm", Settings.PetFarm, function(State)
 Settings.PetFarm = State
+print(State)
 
 RunService.RenderStepped:connect(
     function()
@@ -772,6 +768,7 @@ RunService.RenderStepped:connect(
         end
     end
 )
+
 
 
 if not Settings.PetFarm then
