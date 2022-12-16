@@ -77,6 +77,7 @@ until ucuncuasamaiki and ucuncuasamaiki.Visible
 
 local dailylogin=Player.PlayerGui.DailyLoginApp.Frame.Body.Buttons.ClaimButton
 
+wait(5)
 
 repeat
     wait()
