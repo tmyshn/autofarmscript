@@ -755,6 +755,7 @@ local AilmentFurnitues = {}
 
 
 local Toggle2 = Section1:CreateToggle("PetFarm", Settings.PetFarm, function(State)
+    wait(5)
 Settings.PetFarm = true
 
 
