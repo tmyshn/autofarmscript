@@ -83,7 +83,12 @@ local function Save()
     writefile("V.G Hub//" .. Name, HttpService:JSONEncode(Settings))
 end
 
-
+wait(5)
+Settings.AutoFarm=true;
+wait(5)
+Settings.PetFarm=true;
+wait(5)
+Settings.Start=true;
 
 StarterGui:SetCore(
     "SendNotification",
@@ -1682,8 +1687,5 @@ end)
 Slider4:SetValue(0.5)
 
 
-wait(10)
-Settings.AutoFarm=true;
-Settings.PetFarm=true;
-Settings.Start=true;
+
 
