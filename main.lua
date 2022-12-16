@@ -136,5 +136,3 @@ StarterGui:SetCore(
     }
 )
 
-Settings.BabyFarm=true
-Settings.PetFarm=true
