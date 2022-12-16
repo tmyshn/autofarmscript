@@ -18,6 +18,12 @@ local Debris = game:GetService("Debris")
 local StarterGui = game:GetService("StarterGui")
 local Workspace = game:GetService("Workspace")
 
+
+
+
+
+
+
 local Player = Players.LocalPlayer
 local wait = task.wait
 
@@ -30,6 +36,10 @@ Player.Idled:connect(
 for i,v in pairs(getconnections(Player.Idled)) do
     v:Disable()
 end 
+
+
+
+
 
 local NewsApp = Player.PlayerGui:FindFirstChild("NewsApp")
 local PlayButton = NewsApp:WaitForChild("EnclosingFrame").MainFrame.Contents.PlayButton
@@ -48,6 +58,31 @@ if Baby.Visible then
         v:Fire()
     end 
 end 
+
+
+local ucuncuasama=Player.PlayerGui:FindFirstChild("DialogApp")
+local ucuncuasamaiki=ucuncuasama:WaitForChild("Dialog").GamepassDialog.Buttons.ButtonTemplate
+
+repeat
+    wait()
+    if ucuncuasamaiki.Visible then 
+        for i,v in pairs(getconnections(ucuncuasamaiki.MouseButton1Click)) do
+            v:Fire()
+        end
+    end
+until ucuncuasamaiki and ucuncuasamaiki.Visible
+
+
+local dailylogin=Player.PlayerGui.DailyLoginApp.Frame.Body.Buttons.ClaimButton
+
+repeat
+    wait()
+    if dailylogin.Visible then 
+        for i,v in pairs(getconnections(dailylogin.MouseButton1Click)) do
+            v:Fire()
+        end
+    end
+until dailylogin and dailylogin.Visible
 
 
 local Table = {6152116144, 185655149}
