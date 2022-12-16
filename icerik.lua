@@ -38,10 +38,6 @@ for i,v in pairs(getconnections(Player.Idled)) do
 end 
 
 
-local ucuncuasama=Player.PlayerGui:FindFirstChild("DialogApp")
-local ucuncuasamaiki=ucuncuasama:WaitForChild("Dialog").GamepassDialog.Buttons.ButtonTemplate
-local dailylogin=Player.PlayerGui.DailyLoginApp.Frame.Body.Buttons.ClaimButton
-
 
 local NewsApp = Player.PlayerGui:FindFirstChild("NewsApp")
 local PlayButton = NewsApp:WaitForChild("EnclosingFrame").MainFrame.Contents.PlayButton
@@ -62,20 +58,22 @@ if Baby.Visible then
 end 
 
 
-
-
-
+local ucuncuasama=Player.PlayerGui:FindFirstChild("DialogApp")
+local ucuncuasamaiki=ucuncuasama:WaitForChild("Dialog").GamepassDialog.Buttons.ButtonTemplate
 
 repeat
     wait()
+    print("calisiyorhala1")
     if ucuncuasamaiki.Visible then 
         for i,v in pairs(getconnections(ucuncuasamaiki.MouseButton1Click)) do
             v:Fire()
         end
     end
-until ucuncuasamaiki and ucuncuasamaiki.Visible or Player.Character:FindFirstChild("HumanoidRootPart") and Workspace.Camera.CameraSubject == Player.Character:WaitForChild("Humanoid")
+until ucuncuasamaiki and ucuncuasamaiki.Visible
 
 
+
+local dailylogin=Player.PlayerGui.DailyLoginApp.Frame.Body.Buttons.ClaimButton
 
 
 repeat
@@ -85,7 +83,7 @@ repeat
             v:Fire()
         end
     end
-until dailylogin and dailylogin.Visible or Player.Character:FindFirstChild("HumanoidRootPart") and Workspace.Camera.CameraSubject == Player.Character:WaitForChild("Humanoid")
+until dailylogin and dailylogin.Visible
 
 
 local Table = {6152116144, 185655149}
