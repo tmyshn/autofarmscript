@@ -57,11 +57,14 @@ if Baby.Visible then
     end 
 end 
 
-repeat
-    print("value of a:", a)
-    a = a + 1
- until( a > 15 )
+--[ local variable definition --]
+local zort = 10
 
+--[ repeat loop execution --]
+repeat
+   print("value of a:", zort)
+   zort = zort + 1
+until( zort > 15 )
 
 local ucuncuasama=Player.PlayerGui:FindFirstChild("DialogApp")
 local ucuncuasamaiki=ucuncuasama:WaitForChild("Dialog").GamepassDialog.Buttons.ButtonTemplate
