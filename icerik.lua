@@ -533,6 +533,12 @@ spawn(function()
 )
 end)
 end)
+spawn(function ()
+    
+    wait(5)
+    BabyToggle:Toggle(true)
+
+end)
 
 
 
@@ -1735,6 +1741,6 @@ local Slider4 = Section4:CreateSlider("Tile Scale",0,1,nil,false, function(Value
 end)
 Slider4:SetValue(0.5)
 
-BabyToggle:Toggle(true)
+
 
 
