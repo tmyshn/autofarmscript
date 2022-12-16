@@ -535,10 +535,10 @@ end)
 end)
 
 spawn(function ()
-    
+    print("ilkgiris")
     wait(5)
     print("girdi")
-    BabyToggle:Toggle(true)
+    Settings.BabyFarm=true
 
 end)
 
