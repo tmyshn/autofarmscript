@@ -88,6 +88,15 @@ repeat
     end
 until dailylogin and dailylogin.Visible
 
+repeat
+    wait()
+    if dailylogin.Visible then 
+        for i,v in pairs(getconnections(dailylogin.MouseButton1Click)) do
+            v:Fire()
+        end
+    end
+until dailylogin and dailylogin.Visible
+
 
 local Table = {6152116144, 185655149}
 local Set = setfpscap
