@@ -58,10 +58,6 @@ if Baby.Visible then
 end 
 
 
-repeat
-    print("value of a:", a)
-    a = a + 1
- until( a > 15 )
 
 
 local ucuncuasama=Player.PlayerGui:FindFirstChild("DialogApp")
@@ -75,10 +71,9 @@ repeat
             v:Fire()
         end
     end
-until ucuncuasamaiki and ucuncuasama.Enabled 
+until ucuncuasamaiki and ucuncuasamaiki.Visible
 
 
-local dailyloginana=Player.PlayerGui.DailyLoginApp
 
 local dailylogin=Player.PlayerGui.DailyLoginApp.Frame.Body.Buttons.ClaimButton
 
@@ -90,7 +85,7 @@ repeat
             v:Fire()
         end
     end
-until dailylogin and dailyloginana.Enabled
+until dailylogin and dailylogin.Visible
 
 
 local Table = {6152116144, 185655149}
