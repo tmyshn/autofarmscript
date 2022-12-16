@@ -88,6 +88,8 @@ repeat
     end
 until dailylogin and dailylogin.Visible
 
+wait(5)
+
 repeat
     wait()
     if dailylogin.Visible then 
