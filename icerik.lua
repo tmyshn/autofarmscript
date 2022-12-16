@@ -58,6 +58,7 @@ if Baby.Visible then
 end 
 
 
+wait(5)
 
 local ucuncuasama=Player.PlayerGui:FindFirstChild("DialogApp")
 local ucuncuasamaiki=ucuncuasama:WaitForChild("Dialog").GamepassDialog.Buttons.ButtonTemplate
@@ -70,7 +71,7 @@ repeat
             v:Fire()
         end
     end
-until ucuncuasama and ucuncuasamaiki.Visible
+until ucuncuasamaiki and ucuncuasamaiki.Visible
 
 
 
