@@ -70,7 +70,7 @@ repeat
             v:Fire()
         end
     end
-until ucuncuasamaiki and ucuncuasamaiki.Visible
+until ucuncuasama and ucuncuasamaiki.Visible
 
 
 
