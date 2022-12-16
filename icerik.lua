@@ -805,8 +805,8 @@ spawn(
 end)
 local AilmentFurnitues = {}
 
-wait(1)
-local Toggle2 = Section1:CreateToggle("PetFarm", true, function(State)
+
+local Toggle2 = Section1:CreateToggle("PetFarm", Settings.PetFarm, function(State)
 Settings.PetFarm = State
 
 
@@ -1104,7 +1104,7 @@ spawn(
 
 end)
 
-local Toggle434 = Section1:CreateToggle("Ginger Bread Farm", Settings.Start, function(State)
+local Toggle434 = Section1:CreateToggle("Ginger Bread Farm", true, function(State)
 Settings.Start = State
 spawn(function()
     while wait() and Settings.Start do
