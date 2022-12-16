@@ -533,7 +533,7 @@ spawn(function()
 )
 end)
 end)
-Toggle1:Toggle(true)
+
 
 
 local Toggle2 = Section1:CreateToggle("CPU Usage Improver", Settings.Render, function(State)
