@@ -533,9 +533,11 @@ spawn(function()
 )
 end)
 end)
+
 spawn(function ()
     
     wait(5)
+    print("girdi")
     BabyToggle:Toggle(true)
 
 end)
