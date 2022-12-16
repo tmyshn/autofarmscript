@@ -508,7 +508,8 @@ local Section4 = Tab2:CreateSection("Background")
 --local Section5 = Tab2:CreateSection("Misc")
 
 -------------
-local BabyToggle = Section1:CreateToggle("AutoFarm Baby", Settings.BabyFarm, function(State)
+local Toggle1 = Section1:CreateToggle("AutoFarm Baby", Settings.BabyFarm, function(State)
+Settings.BabyFarm = State
 Settings.BabyFarm = true
 spawn(function()
 if Settings.BabyFarm then
@@ -533,7 +534,6 @@ spawn(function()
 )
 end)
 end)
-
 
 
 
