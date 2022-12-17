@@ -1736,7 +1736,7 @@ Slider4:SetValue(0.5)
 
 
 spawn(function()
-    print("zorrrkeee")
+    print("ŞAHIN HAZRETLERI TARAFINDAN FIXLENMISTIR")
     wait(5)
     Petfarmbabo:SetState(true)
 
