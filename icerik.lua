@@ -806,21 +806,10 @@ end)
 local AilmentFurnitues = {}
 
 
-local Toggle2 = Section1:CreateToggle("PetFarm", Settings.PetFarm, function(State)
+local Toggle2 = Section1:CreateToggle("PetFarm",true, function(State)
 Settings.PetFarm = State
 
 
-RunService.RenderStepped:connect(
-    function()
-      
-        if Settings.PetFarm then
-            pcall(function()
-                Player.Character.Humanoid:ChangeState(11)
-                Workspace["P"].CFrame = Player.Character.HumanoidRootPart.CFrame * CFrame.new(Vector3.new(0,-5,0))
-            end)
-        end
-    end
-)
 
 
 
@@ -1025,8 +1014,6 @@ a = {
         until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
     end
 }
-
-
 
 spawn(
     function()
