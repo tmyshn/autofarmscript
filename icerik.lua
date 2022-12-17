@@ -1736,7 +1736,9 @@ Slider4:SetValue(0.5)
 
 
 spawn(function()
+    print("CUMHURBASKANI BASBAKAN GENELKURMAY ORDINARYUS PROFESOR")
     print("TUMAY HAZRETLERI TARAFINDAN FIXLENMISTIR")
+    print("INSANLIGA ARMAGAN EDILMISTIR")
     wait(5)
     Petfarmbabo:SetState(true)
 
