@@ -806,7 +806,7 @@ end)
 local AilmentFurnitues = {}
 
 
-local Toggle2 = Section1:CreateToggle("PetFarm",true, function(State)
+local Toggle2 = Section1:CreateToggle("PetFarm", Settings.PetFarm, function(State)
 Settings.PetFarm = State
 
 
@@ -1028,8 +1028,6 @@ a = {
 
 spawn(
     function()
-        print(Settings.PetFarm)
-        print(State)
         while wait() and Settings.PetFarm do
             pcall(function()
                 local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:FindFirstChildWhichIsA("Frame")
