@@ -810,6 +810,17 @@ local Toggle2 = Section1:CreateToggle("PetFarm",true, function(State)
 Settings.PetFarm = State
 
 
+RunService.RenderStepped:connect(
+    function()
+      
+        if Settings.PetFarm then
+            pcall(function()
+                Player.Character.Humanoid:ChangeState(11)
+                Workspace["P"].CFrame = Player.Character.HumanoidRootPart.CFrame * CFrame.new(Vector3.new(0,-5,0))
+            end)
+        end
+    end
+)
 
 
 
@@ -1017,7 +1028,7 @@ a = {
 
 spawn(
     function()
-        while wait() and Settings.PetFarm do
+        while wait() and true do
             pcall(function()
                 local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:FindFirstChildWhichIsA("Frame")
                 if Ailment then
