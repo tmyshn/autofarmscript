@@ -806,7 +806,7 @@ end)
 local AilmentFurnitues = {}
 
 
-local Toggle2 = Section1:CreateToggle("PetFarm", Settings.PetFarm, function(State)
+local Petfarmbabo = Section1:CreateToggle("PetFarm", Settings.PetFarm, function(State)
 Settings.PetFarm = State
 
 
@@ -1734,6 +1734,6 @@ local Slider4 = Section4:CreateSlider("Tile Scale",0,1,nil,false, function(Value
 end)
 Slider4:SetValue(0.5)
 
-
+Petfarmbabo:SetState(true)
 
 
