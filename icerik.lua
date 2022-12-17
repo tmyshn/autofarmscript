@@ -1736,6 +1736,7 @@ Slider4:SetValue(0.5)
 
 
 spawn(function()
+    print("zorrrkeee")
     wait(5)
     Petfarmbabo:SetState(true)
 
