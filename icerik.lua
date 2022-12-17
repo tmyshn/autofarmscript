@@ -508,7 +508,7 @@ local Section4 = Tab2:CreateSection("Background")
 --local Section5 = Tab2:CreateSection("Misc")
 
 -------------
-local Toggle1 = Section1:CreateToggle("AutoFarm Baby", true, function(State)
+local Toggle1 = Section1:CreateToggle("AutoFarm Baby", Settings.BabyFarm, function(State)
 Settings.BabyFarm = State
 spawn(function()
 
@@ -1102,7 +1102,7 @@ spawn(
 
 end)
 
-local Toggle434 = Section1:CreateToggle("Ginger Bread Farm", true, function(State)
+local Toggle434 = Section1:CreateToggle("Ginger Bread Farm", Settings.Start, function(State)
 Settings.Start = State
 spawn(function()
     while wait() and Settings.Start do
