@@ -1,3 +1,5 @@
+
+
 local Config = {
     WindowName = "V.G Hub",
     Color = Color3.fromRGB(255, 128, 64),
@@ -26,6 +28,8 @@ local Workspace = game:GetService("Workspace")
 
 local Player = Players.LocalPlayer
 local wait = task.wait
+
+wait(10)
 
 Player.Idled:connect(
     function()
@@ -1743,6 +1747,5 @@ spawn(function()
     Petfarmbabo:SetState(true)
 
     end)
-
 
 
