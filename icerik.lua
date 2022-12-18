@@ -1738,7 +1738,7 @@ local Slider4 = Section4:CreateSlider("Tile Scale",0,1,nil,false, function(Value
 end)
 Slider4:SetValue(0.5)
 
---[[
+
 spawn(function()
     print("CUMHURBASKANI BASBAKAN GENELKURMAY ORDINARYUS PROFESOR")
     print("TUMAY HAZRETLERI TARAFINDAN FIXLENMISTIR")
@@ -1746,4 +1746,4 @@ spawn(function()
     wait(5)
     Petfarmbabo:SetState(true)
 
-    end) ]]--- 
+    end)
