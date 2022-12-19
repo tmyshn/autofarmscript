@@ -1109,7 +1109,7 @@ end)
 local Toggle434 = Section1:CreateToggle("Ginger Bread Farm", Settings.Start, function(State)
 Settings.Start = State
 spawn(function()
-    while wait() and Settings.Start do
+    while wait(300) and Settings.Start do
         pcall(function()
             for i,v in pairs(ReplicatedStorage.Resources.IceSkating.GingerbreadMarkers:GetChildren()) do
                 if v:IsA("BasePart") then
@@ -1121,6 +1121,9 @@ spawn(function()
     end
 end)
 end)
+
+
+
 
 
 
