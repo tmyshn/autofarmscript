@@ -84,8 +84,10 @@ ScreenGui:Destroy()
        repeat wait() until game:IsLoaded() wait(50) print("ServerHoped or rejoined")
        loadstring(game:HttpGet('https://raw.githubusercontent.com/tmyshn/autofarmscript/main/main.lua'))()]]   --]]
 
+       --[[
        local queueteleport =fluxus and fluxus.queue_on_teleport
 queueteleport("repeat wait() until game:IsLoaded() wait(50) loadstring(game:HttpGet('https://raw.githubusercontent.com/tmyshn/autofarmscript/main/main.lua'))()")
+--]]
 
 
 
