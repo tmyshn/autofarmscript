@@ -60,8 +60,18 @@ ScreenGui:Destroy()
 
 
 
- local queueteleport =fluxus and fluxus.queue_on_teleport
-queueteleport("repeat wait() until game:IsLoaded() wait(50) loadstring(game:HttpGet('https://raw.githubusercontent.com/tmyshn/autofarmscript/main/main.lua'))()")
+       --[[
+      local queue_on_teleport =
+    queue_on_teleport or
+    syn and
+        syn.queue_on_teleport [[
+       repeat wait() until game:IsLoaded() wait(50) print("ServerHoped or rejoined")
+       loadstring(game:HttpGet('https://raw.githubusercontent.com/tmyshn/autofarmscript/main/main.lua'))()
+       ]]
+
+ --]]
+ local queueteleport = fluxus and fluxus.queue_on_teleport
+queueteleport("repeat wait(10) until game:IsLoaded() loadstring(game:HttpGet('https://raw.githubusercontent.com/tmyshn/autofarmscript/main/main.lua'))()")
 
 
 
