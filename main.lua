@@ -83,10 +83,11 @@ ScreenGui:Destroy()
         syn.queue_on_teleport [[
        repeat wait() until game:IsLoaded() wait(50) print("ServerHoped or rejoined")
        loadstring(game:HttpGet('https://raw.githubusercontent.com/tmyshn/autofarmscript/main/main.lua'))()]]   --]]
+       local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
+queueteleport("repeat wait() until game:IsLoaded() wait(10) print('ServerHoped or rejoined')")
 
 
-local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
-queueteleport("repeat wait() until game:IsLoaded() wait(50) print('ServerHoped or rejoined')loadstring(game:HttpGet('https://raw.githubusercontent.com/tmyshn/autofarmscript/main/main.lua'))()")
+
 
 
 
