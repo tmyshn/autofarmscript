@@ -1,25 +1,6 @@
---[[
-██╗░░░██╗░░░░██████╗░  ██╗░░██╗██╗░░░██╗██████╗░  ███╗░░░███╗░█████╗░██╗░░██╗██╗███╗░░██╗░██████╗░
-██║░░░██║░░░██╔════╝░  ██║░░██║██║░░░██║██╔══██╗  ████╗░████║██╔══██╗██║░██╔╝██║████╗░██║██╔════╝░
-╚██╗░██╔╝░░░██║░░██╗░  ███████║██║░░░██║██████╦╝  ██╔████╔██║███████║█████═╝░██║██╔██╗██║██║░░██╗░
-░╚████╔╝░░░░██║░░╚██╗  ██╔══██║██║░░░██║██╔══██╗  ██║╚██╔╝██║██╔══██║██╔═██╗░██║██║╚████║██║░░╚██╗
-░░╚██╔╝░░██╗╚██████╔╝  ██║░░██║╚██████╔╝██████╦╝  ██║░╚═╝░██║██║░░██║██║░╚██╗██║██║░╚███║╚██████╔╝
-░░░╚═╝░░░╚═╝░╚═════╝░  ╚═╝░░╚═╝░╚═════╝░╚═════╝░  ╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝╚═╝░░╚══╝░╚═════╝░
-██████╗░░█████╗░██████╗░██╗░░░░░░█████╗░██╗░░██╗  ░██████╗░██████╗░███████╗░█████╗░████████╗
-██╔══██╗██╔══██╗██╔══██╗██║░░░░░██╔══██╗╚██╗██╔╝  ██╔════╝░██╔══██╗██╔════╝██╔══██╗╚══██╔══╝
-██████╔╝██║░░██║██████╦╝██║░░░░░██║░░██║░╚███╔╝░  ██║░░██╗░██████╔╝█████╗░░███████║░░░██║░░░
-██╔══██╗██║░░██║██╔══██╗██║░░░░░██║░░██║░██╔██╗░  ██║░░╚██╗██╔══██╗██╔══╝░░██╔══██║░░░██║░░░
-██║░░██║╚█████╔╝██████╦╝███████╗╚█████╔╝██╔╝╚██╗  ╚██████╔╝██║░░██║███████╗██║░░██║░░░██║░░░
-╚═╝░░╚═╝░╚════╝░╚═════╝░╚══════╝░╚════╝░╚═╝░░╚═╝  ░╚═════╝░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝░░░╚═╝░░░
-░█████╗░░██████╗░░█████╗░██╗███╗░░██╗
-██╔══██╗██╔════╝░██╔══██╗██║████╗░██║
-███████║██║░░██╗░███████║██║██╔██╗██║
-██╔══██║██║░░╚██╗██╔══██║██║██║╚████║
-██║░░██║╚██████╔╝██║░░██║██║██║░╚███║
-╚═╝░░╚═╝░╚═════╝░╚═╝░░╚═╝╚═╝╚═╝░░╚══╝]]--
-repeat
+--[[repeat
     wait()
-until game:IsLoaded()
+until game:IsLoaded()  --]]
 
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/1201for/V.G_Hub_Extras/main/Universal_Client_Bypass"))()
@@ -77,7 +58,10 @@ end
 BlurEffect:Destroy()
 ScreenGui:Destroy()
 
-local queue_on_teleport =
+
+
+       --[[
+      local queue_on_teleport =
     queue_on_teleport or
     syn and
         syn.queue_on_teleport [[
@@ -85,12 +69,9 @@ local queue_on_teleport =
        loadstring(game:HttpGet('https://raw.githubusercontent.com/tmyshn/autofarmscript/main/main.lua'))()
        ]]
 
-       --[[
-       local queueteleport =fluxus and fluxus.queue_on_teleport
-queueteleport("repeat wait() until game:IsLoaded() wait(50) loadstring(game:HttpGet('https://raw.githubusercontent.com/tmyshn/autofarmscript/main/main.lua'))()")
-
  --]]
-
+ local queueteleport =fluxus and fluxus.queue_on_teleport
+queueteleport("repeat wait() until game:IsLoaded() wait(50) loadstring(game:HttpGet('https://raw.githubusercontent.com/tmyshn/autofarmscript/main/main.lua'))()")
 
 
 
