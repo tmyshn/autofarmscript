@@ -29,16 +29,6 @@ local Workspace = game:GetService("Workspace")
 local Player = Players.LocalPlayer
 local wait = task.wait
 
-queueteleport = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport)
-
-Player.LocalPlayer.OnTeleport:Connect(function(State)
-   if State == Enum.TeleportState.Started then
-       if queueteleport then
-           queueteleport("wait(50) loadstring(game:HttpGet('https://raw.githubusercontent.com/tmyshn/autofarmscript/main/main.lua'))()")
-       end
-   end
-end)
-
 wait(10)
 
 Player.Idled:connect(
