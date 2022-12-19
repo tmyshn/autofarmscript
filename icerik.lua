@@ -29,7 +29,7 @@ local Workspace = game:GetService("Workspace")
 local Player = Players.LocalPlayer
 local wait = task.wait
 
-wait(10)
+
 
 Player.Idled:connect(
     function()
