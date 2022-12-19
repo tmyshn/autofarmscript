@@ -82,7 +82,7 @@ local queue_on_teleport =
     syn and
         syn.queue_on_teleport [[
        repeat wait() until game:IsLoaded() wait(50) print("ServerHoped or rejoined")
-       loadstring(game:HttpGet('https://raw.githubusercontent.com/tmyshn/autofarmscript/main/main.lua'))()]]   -
+       loadstring(game:HttpGet('https://raw.githubusercontent.com/tmyshn/autofarmscript/main/main.lua'))()]]   
 
        --[[
        local queueteleport =fluxus and fluxus.queue_on_teleport
