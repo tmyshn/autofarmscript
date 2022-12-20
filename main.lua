@@ -1,6 +1,6 @@
---[[repeat
+
     wait()
-until game:IsLoaded()  --]]
+until game:IsLoaded()
 
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/1201for/V.G_Hub_Extras/main/Universal_Client_Bypass"))()
