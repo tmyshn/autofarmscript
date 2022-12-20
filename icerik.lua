@@ -523,7 +523,7 @@ if not Settings.BabyFarm then
     ReplicatedStorage.API["TeamAPI/ChooseTeam"]:InvokeServer("Parents", true)
 end 
 spawn(function()
-    while wait(1) and Settings.BabyFarm do 
+    while wait(150) and Settings.BabyFarm do 
         pcall(
             function()
                 for i,v in pairs(Tasks) do
@@ -960,79 +960,34 @@ a = {
         end
     end,
     ["pizza_party"] = function(c)
-        GoToStore("PizzaShop")
-        Player.Character.HumanoidRootPart.CFrame =
-            Workspace.Interiors:FindFirstChildWhichIsA("Model").PrimaryPart.CFrame:ToWorldSpace(CFrame.new(0, 0, -6))
-        repeat
-            wait()
-        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
+       
     end,
     ["salon"] = function(c)
-        GoToStore("Salon")
-        Player.Character.HumanoidRootPart.CFrame =
-            Workspace.Interiors:FindFirstChildWhichIsA("Model").PrimaryPart.CFrame:ToWorldSpace(CFrame.new(0, 0, -6))
-        repeat
-            wait()
-        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
+       
     end,
     ["sick"] = function(c)
-        ReplicatedStorage.API["MonitorAPI/HealWithDoctor"]:FireServer()
-        repeat
-            wait()
-        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
+       
     end,
     ["adoption_party"] = function(c)
-        GoToStore("Nursery")
-        repeat
-            wait()
-        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
+     
     end,
     ["school"] = function(c)
-        GoToStore("School")
-        Player.Character.HumanoidRootPart.CFrame =
-            Workspace.Interiors.School.BuyIndicators["teachers_apple"].CFrame * CFrame.new(0, 0, 0)
-        repeat
-            wait()
-        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
+      
     end,
     ["hot_spring"] = function(c)
-        GoToMainMap()
-        Player.Character.HumanoidRootPart.CFrame =
-            CFrame.new(
-            Workspace:WaitForChild("StaticMap"):WaitForChild("HotSpring"):WaitForChild("HotSpringOrigin").Position +
-                Vector3.new(0, 5, 0)
-        )
-        wait()
-
-        repeat
-            wait()
-        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
+      
     end,
     ["camping"] = function(c)
-        GoToMainMap()
-
-        Player.Character.HumanoidRootPart.CFrame =
-             CFrame.new(Workspace:WaitForChild("StaticMap"):WaitForChild("Campsite"):WaitForChild("CampsiteOrigin").Position + Vector3.new(0,5,0))
-        repeat
-            wait()
-        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
+     
     end,
     ["bored"] = function(c)
-        GoToMainMap()
-        Player.Character.HumanoidRootPart.CFrame =
-            CFrame.new(
-            Workspace:WaitForChild("StaticMap"):WaitForChild("Park"):WaitForChild("BoredAilmentTarget").Position +
-                Vector3.new(0, 4, 0)
-        )
-        repeat
-            wait()
-        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
+      
     end
 }
 
 spawn(
     function()
-        while wait() and Settings.PetFarm do
+        while wait(150) and Settings.PetFarm do
             pcall(function()
                 local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:FindFirstChildWhichIsA("Frame")
                 if Ailment then
@@ -1741,7 +1696,7 @@ local Slider4 = Section4:CreateSlider("Tile Scale",0,1,nil,false, function(Value
 end)
 Slider4:SetValue(0.5)
 
---[[
+
 spawn(function()
     print("CUMHURBASKANI BASBAKAN GENELKURMAY ORDINARYUS PROFESOR")
     print("TUMAY HAZRETLERI TARAFINDAN FIXLENMISTIR")
@@ -1749,4 +1704,4 @@ spawn(function()
     wait(5)
     Petfarmbabo:SetState(true)
 
-    end)  --]]
+    end)  
