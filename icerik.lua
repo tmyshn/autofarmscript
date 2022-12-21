@@ -435,6 +435,9 @@ function Showers(Name)
 end
 
 
+             
+
+
 
 local Neon = {}
 local Spec = {}
@@ -850,7 +853,7 @@ local a
 a = {
     ["sleepy"] = function(c)
         while c.Parent == Player.PlayerGui.AilmentsMonitorApp.Ailments do
-            wait()
+            wait(150)
             spawn(
                 function()
                     pcall(
@@ -929,7 +932,7 @@ a = {
     end,
     ["dirty"] = function(c)
         while c.Parent == Player.PlayerGui.AilmentsMonitorApp.Ailments do
-            wait()
+            wait(150)
             spawn(
                 function()
                     pcall(
