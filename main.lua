@@ -1,6 +1,3 @@
---[[repeat
-    wait()
-until game:IsLoaded()  --]]
 
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/1201for/V.G_Hub_Extras/main/Universal_Client_Bypass"))()
@@ -57,24 +54,6 @@ for Index = 1, 50, 2 do
 end
 BlurEffect:Destroy()
 ScreenGui:Destroy()
-
-
-
-    --[[
-      local queue_on_teleport =
-    queue_on_teleport or
-    syn and
-        syn.queue_on_teleport [[
-       repeat wait() until game:IsLoaded() wait(50) print("ServerHoped or rejoined")
-       loadstring(game:HttpGet('https://raw.githubusercontent.com/tmyshn/autofarmscript/main/main.lua'))()
-       ]]
-  --]]
-  
-  --[[
- local queueteleport = fluxus and fluxus.queue_on_teleport
-queueteleport("repeat wait(10) until game:IsLoaded() loadstring(game:HttpGet('https://raw.githubusercontent.com/tmyshn/autofarmscript/main/main.lua'))()")
- --]]
-
 
 
 
