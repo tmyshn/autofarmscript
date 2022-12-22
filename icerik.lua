@@ -1032,7 +1032,7 @@ a = {
 
 spawn(
     function()
-        while wait(150) and Settings.PetFarm do
+        while wait() and Settings.PetFarm do
             pcall(function()
                 local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:FindFirstChildWhichIsA("Frame")
                 if Ailment then
