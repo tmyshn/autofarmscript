@@ -448,7 +448,10 @@ for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_d
     PetsShow[Key] = v
     table.insert(List, Key)
     table.sort(List, key)
+    
 end
+
+Settings.Key=PetsShow[0].unique;
 
 UserInputService.WindowFocusReleased:Connect(
     function()
