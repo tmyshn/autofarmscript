@@ -538,7 +538,7 @@ spawn(function()
                 if Pet.Parent ~= Workspace.Pets then
                     print("PET YENIDEN BASLADI")
                     Petfarmbabo:SetState(false)
-                    
+
                     repeat wait()
                         Petfarmbabo:SetState(true)
                         print(Petfarmbabo:GetState())
@@ -1063,14 +1063,14 @@ spawn(
                     end
                 end
                 if Pet and wait() then
-                    print("petfarm --ilk if in ici")
+                 --   print("petfarm --ilk if in ici")
                     if Pet.Parent ~= Workspace.Pets then
-                        print("petfarm --ikinci if in ici")
+                      --  print("petfarm --ikinci if in ici")
                         ReplicatedStorage.API["ToolAPI/Unequip"]:InvokeServer(PetID)
                         Pet = ReplicatedStorage.API["ToolAPI/Equip"]:InvokeServer(PetID)
                     end
                 else
-                    print("petfarm --else in ici")
+                   -- print("petfarm --else in ici")
                     ReplicatedStorage.API["ToolAPI/Unequip"]:InvokeServer(PetID)
                     Pet = ReplicatedStorage.API["ToolAPI/Equip"]:InvokeServer(PetID)
                 end
