@@ -451,7 +451,7 @@ for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_d
     
 end
 
-Settings.Key=PetsShow[List[0]];
+
 
 UserInputService.WindowFocusReleased:Connect(
     function()
@@ -853,7 +853,7 @@ local a
 a = {
     ["sleepy"] = function(c)
         while c.Parent == Player.PlayerGui.AilmentsMonitorApp.Ailments do
-            wait()
+            wait(20)
             spawn(
                 function()
                     pcall(
@@ -933,7 +933,7 @@ a = {
     end,
     ["dirty"] = function(c)
         while c.Parent == Player.PlayerGui.AilmentsMonitorApp.Ailments do
-            wait()
+            wait(20)
             spawn(
                 function()
                     pcall(
