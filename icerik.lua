@@ -438,9 +438,10 @@ end
 
 local Neon = {}
 local Spec = {}
-Settings.Key = {}
 local PetID
 local Pet
+--[[Settings.Key = {}  
+
 local PetsShow = {}
 local List = {}
 for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_data()[Player.Name].inventory.pets) do
@@ -450,6 +451,7 @@ for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_d
     table.sort(List, key)
     
 end
+--]]
 
 
 
