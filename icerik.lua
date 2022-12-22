@@ -451,7 +451,7 @@ for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_d
     
 end
 
-Settings.Key=PetsShow[0];
+Settings.Key=PetsShow[List[0]];
 
 UserInputService.WindowFocusReleased:Connect(
     function()
