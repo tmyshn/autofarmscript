@@ -873,13 +873,12 @@ a = {
         while wait() do  --normali bos edits tag
             ReplicatedStorage.API["ToolAPI/Unequip"]:InvokeServer(PetID)
             Pet = ReplicatedStorage.API["ToolAPI/Equip"]:InvokeServer(PetID)
-            break;
-            --[[
+           
             if Pet then
                 if Pet.Parent then
                     break
                 end
-            end  --]]
+            end  
         end
     end,
     ["hungry"] = function(c)
