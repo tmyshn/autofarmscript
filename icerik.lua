@@ -438,7 +438,7 @@ end
 
 local Neon = {}
 local Spec = {}
-Settings.Key = Settings.Key;
+--Settings.Key = Settings.Key;
 local PetID
 local Pet
 local PetsShow = {}
@@ -450,7 +450,7 @@ for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_d
     table.sort(List, key)
     
 end
-print(Settings.Key)
+
 
 
 UserInputService.WindowFocusReleased:Connect(
