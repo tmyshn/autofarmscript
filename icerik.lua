@@ -1036,7 +1036,7 @@ a = {
 
 spawn(
     function()
-        while wait(50) and Settings.PetFarm do -- normali bos wait() edits tag
+        while wait(30) and Settings.PetFarm do -- normali bos wait() edits tag
             pcall(function()
                 local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:FindFirstChildWhichIsA("Frame")
                 if Ailment then
