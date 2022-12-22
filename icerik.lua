@@ -1056,6 +1056,7 @@ spawn(
                 if Pet and wait() then
                     print("petfarm --ilk if in ici")
                     if Pet.Parent ~= Workspace.Pets then
+                        print("petfarm --ikinci if in ici")
                         ReplicatedStorage.API["ToolAPI/Unequip"]:InvokeServer(PetID)
                         Pet = ReplicatedStorage.API["ToolAPI/Equip"]:InvokeServer(PetID)
                     end
