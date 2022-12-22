@@ -538,8 +538,13 @@ spawn(function()
                 if Pet.Parent ~= Workspace.Pets then
                     print("PET YENIDEN BASLADI")
                     Petfarmbabo:SetState(false)
-                    wait(2)
-                    Petfarmbabo:SetState(true)
+                    
+                    repeat wait()
+                        Petfarmbabo:SetState(true)
+                        print(Petfarmbabo:GetState())
+                    until  Petfarmbabo:GetState()==true              
+               
+                   
                   
 
                     
@@ -1767,7 +1772,5 @@ spawn(function()
     print("INSANLIGA ARMAGAN EDILMISTIR")
     wait(5)
     Petfarmbabo:SetState(true)
-    wait(5)
-    print(Petfarmbabo:GetState())
 
     end)  
