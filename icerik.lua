@@ -450,7 +450,7 @@ for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_d
     table.sort(List, key)
     
 end
-
+print(Settings.Key.unique)
 
 
 UserInputService.WindowFocusReleased:Connect(
