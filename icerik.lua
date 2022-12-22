@@ -536,6 +536,7 @@ spawn(function()
                     end
                 end 
                 if Pet.Parent ~= Workspace.Pets then
+                    print("PET YENIDEN BASLADI")
                     Petfarmbabo:SetState(false)
                     wait(2)
                     Petfarmbabo:SetState(true)
