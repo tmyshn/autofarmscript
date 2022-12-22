@@ -540,14 +540,11 @@ spawn(function()
                     Petfarmbabo:SetState(false)
 
                     repeat wait()
+                        print("girdi repeat")
                         Petfarmbabo:SetState(true)
                         print(Petfarmbabo:GetState())
-                    until  Petfarmbabo:GetState()==true              
-               
-                   
-                  
-
-                    
+                    until  (Petfarmbabo:GetState()~=false)   
+          
 
                 end
             end
@@ -1772,5 +1769,7 @@ spawn(function()
     print("INSANLIGA ARMAGAN EDILMISTIR")
     wait(5)
     Petfarmbabo:SetState(true)
+    wait(7)
+    print(Petfarmbabo:GetState())
 
     end)  
