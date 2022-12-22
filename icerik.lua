@@ -852,8 +852,7 @@ end
 local a
 a = {
     ["sleepy"] = function(c)
-        while c.Parent == Player.PlayerGui.AilmentsMonitorApp.Ailments do
-            wait(150)
+
             spawn(
                 function()
                     pcall(
@@ -871,7 +870,7 @@ a = {
                     )
                 end
             )
-        end
+        
 
         while wait() do
             ReplicatedStorage.API["ToolAPI/Unequip"]:InvokeServer(PetID)
@@ -931,8 +930,6 @@ a = {
         ReplicatedStorage.API["PetAPI/ConsumeFoodItem"]:FireServer(Tea)
     end,
     ["dirty"] = function(c)
-        while c.Parent == Player.PlayerGui.AilmentsMonitorApp.Ailments do
-            wait(150)
             spawn(
                 function()
                     pcall(
@@ -950,7 +947,7 @@ a = {
                     )
                 end
             )
-        end
+        
 
         while wait() do
             ReplicatedStorage.API["ToolAPI/Unequip"]:InvokeServer(PetID)
