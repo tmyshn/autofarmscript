@@ -435,9 +435,6 @@ function Showers(Name)
 end
 
 
-             
-
-
 
 local Neon = {}
 local Spec = {}
@@ -852,7 +849,8 @@ end
 local a
 a = {
     ["sleepy"] = function(c)
-
+        while c.Parent == Player.PlayerGui.AilmentsMonitorApp.Ailments do
+            wait()
             spawn(
                 function()
                     pcall(
@@ -870,7 +868,7 @@ a = {
                     )
                 end
             )
-        
+        end
 
         while wait() do
             ReplicatedStorage.API["ToolAPI/Unequip"]:InvokeServer(PetID)
@@ -930,6 +928,8 @@ a = {
         ReplicatedStorage.API["PetAPI/ConsumeFoodItem"]:FireServer(Tea)
     end,
     ["dirty"] = function(c)
+        while c.Parent == Player.PlayerGui.AilmentsMonitorApp.Ailments do
+            wait()
             spawn(
                 function()
                     pcall(
@@ -947,7 +947,7 @@ a = {
                     )
                 end
             )
-        
+        end
 
         while wait() do
             ReplicatedStorage.API["ToolAPI/Unequip"]:InvokeServer(PetID)
@@ -960,28 +960,73 @@ a = {
         end
     end,
     ["pizza_party"] = function(c)
-       
+        GoToStore("PizzaShop")
+        Player.Character.HumanoidRootPart.CFrame =
+            Workspace.Interiors:FindFirstChildWhichIsA("Model").PrimaryPart.CFrame:ToWorldSpace(CFrame.new(0, 0, -6))
+        repeat
+            wait()
+        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
     end,
     ["salon"] = function(c)
-       
+        GoToStore("Salon")
+        Player.Character.HumanoidRootPart.CFrame =
+            Workspace.Interiors:FindFirstChildWhichIsA("Model").PrimaryPart.CFrame:ToWorldSpace(CFrame.new(0, 0, -6))
+        repeat
+            wait()
+        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
     end,
     ["sick"] = function(c)
-       
+        ReplicatedStorage.API["MonitorAPI/HealWithDoctor"]:FireServer()
+        repeat
+            wait()
+        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
     end,
     ["adoption_party"] = function(c)
-     
+        GoToStore("Nursery")
+        repeat
+            wait()
+        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
     end,
     ["school"] = function(c)
-      
+        GoToStore("School")
+        Player.Character.HumanoidRootPart.CFrame =
+            Workspace.Interiors.School.BuyIndicators["teachers_apple"].CFrame * CFrame.new(0, 0, 0)
+        repeat
+            wait()
+        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
     end,
     ["hot_spring"] = function(c)
-      
+        GoToMainMap()
+        Player.Character.HumanoidRootPart.CFrame =
+            CFrame.new(
+            Workspace:WaitForChild("StaticMap"):WaitForChild("HotSpring"):WaitForChild("HotSpringOrigin").Position +
+                Vector3.new(0, 5, 0)
+        )
+        wait()
+
+        repeat
+            wait()
+        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
     end,
     ["camping"] = function(c)
-     
+        GoToMainMap()
+
+        Player.Character.HumanoidRootPart.CFrame =
+             CFrame.new(Workspace:WaitForChild("StaticMap"):WaitForChild("Campsite"):WaitForChild("CampsiteOrigin").Position + Vector3.new(0,5,0))
+        repeat
+            wait()
+        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
     end,
     ["bored"] = function(c)
-      
+        GoToMainMap()
+        Player.Character.HumanoidRootPart.CFrame =
+            CFrame.new(
+            Workspace:WaitForChild("StaticMap"):WaitForChild("Park"):WaitForChild("BoredAilmentTarget").Position +
+                Vector3.new(0, 4, 0)
+        )
+        repeat
+            wait()
+        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
     end
 }
 
@@ -1695,7 +1740,6 @@ local Slider4 = Section4:CreateSlider("Tile Scale",0,1,nil,false, function(Value
 	Window:SetTileScale(Value)
 end)
 Slider4:SetValue(0.5)
-
 
 spawn(function()
     print("CUMHURBASKANI BASBAKAN GENELKURMAY ORDINARYUS PROFESOR")
