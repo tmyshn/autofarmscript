@@ -1768,6 +1768,6 @@ spawn(function()
     wait(5)
     Petfarmbabo:SetState(true)
     wait(5)
-    print(Petfarmbabo.ToggleState)
+    print(Petfarmbabo:GetState())
 
     end)  
