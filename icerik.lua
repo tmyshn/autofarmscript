@@ -540,6 +540,8 @@ spawn(function()
                     Petfarmbabo:SetState(false)
                     wait(2)
                     Petfarmbabo:SetState(true)
+                    
+
                 end
             end
         )
@@ -1763,5 +1765,7 @@ spawn(function()
     print("INSANLIGA ARMAGAN EDILMISTIR")
     wait(5)
     Petfarmbabo:SetState(true)
+    wait(1)
+    print(Petfarmbabo)
 
     end)  
