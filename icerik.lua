@@ -523,7 +523,7 @@ if not Settings.BabyFarm then
     ReplicatedStorage.API["TeamAPI/ChooseTeam"]:InvokeServer("Parents", true)
 end 
 spawn(function()
-    while wait(150) and Settings.BabyFarm do  -- normali bos wait edits tag
+    while wait(50) and Settings.BabyFarm do  -- normali bos wait edits tag
         pcall(
             function()
                 for i,v in pairs(Tasks) do
@@ -873,6 +873,7 @@ a = {
         while wait() do  --normali bos edits tag
             ReplicatedStorage.API["ToolAPI/Unequip"]:InvokeServer(PetID)
             Pet = ReplicatedStorage.API["ToolAPI/Equip"]:InvokeServer(PetID)
+            break;
             --[[
             if Pet then
                 if Pet.Parent then
@@ -1033,7 +1034,7 @@ a = {
 
 spawn(
     function()
-        while wait(150) and Settings.PetFarm do -- normali bos wait() edits tag
+        while wait(50) and Settings.PetFarm do -- normali bos wait() edits tag
             pcall(function()
                 local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:FindFirstChildWhichIsA("Frame")
                 if Ailment then
