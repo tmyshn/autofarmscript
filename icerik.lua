@@ -439,6 +439,7 @@ end
 local Neon = {}
 local Spec = {}
 --Settings.Key = Settings.Key;
+print(Settings.Key.unique)
 local PetID
 local Pet
 local PetsShow = {}
