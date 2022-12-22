@@ -523,7 +523,7 @@ if not Settings.BabyFarm then
     ReplicatedStorage.API["TeamAPI/ChooseTeam"]:InvokeServer("Parents", true)
 end 
 spawn(function()
-    while wait(150) and Settings.BabyFarm do 
+    while wait(150) and Settings.BabyFarm do  -- normali bos wait edits tag
         pcall(
             function()
                 for i,v in pairs(Tasks) do
@@ -870,14 +870,15 @@ a = {
             )
         end
 
-        while wait() do
+        while wait() do  --normali bos edits tag
             ReplicatedStorage.API["ToolAPI/Unequip"]:InvokeServer(PetID)
             Pet = ReplicatedStorage.API["ToolAPI/Equip"]:InvokeServer(PetID)
+            --[[
             if Pet then
                 if Pet.Parent then
                     break
                 end
-            end
+            end  --]]
         end
     end,
     ["hungry"] = function(c)
@@ -1032,7 +1033,7 @@ a = {
 
 spawn(
     function()
-        while wait(150) and Settings.PetFarm do
+        while wait(150) and Settings.PetFarm do -- normali bos wait() edits tag
             pcall(function()
                 local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:FindFirstChildWhichIsA("Frame")
                 if Ailment then
@@ -1109,7 +1110,7 @@ end)
 local Toggle434 = Section1:CreateToggle("Ginger Bread Farm", Settings.Start, function(State)
 Settings.Start = State
 spawn(function()
-    while wait(300) and Settings.Start do
+    while wait(300) and Settings.Start do  -- normali bos wait()  edits tag
         pcall(function()
             for i,v in pairs(ReplicatedStorage.Resources.IceSkating.GingerbreadMarkers:GetChildren()) do
                 if v:IsA("BasePart") then
