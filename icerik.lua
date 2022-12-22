@@ -1038,6 +1038,7 @@ spawn(
     function()
         while wait(30) and Settings.PetFarm do -- normali bos wait() edits tag
             pcall(function()
+                print("suanda pet farm calisti")
                 local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:FindFirstChildWhichIsA("Frame")
                 if Ailment then
                     local Name = Ailment.Name
@@ -1046,16 +1047,19 @@ spawn(
                     end
                 end
                 if Pet and wait() then
+                    print("petfarm --ilk if in ici")
                     if Pet.Parent ~= Workspace.Pets then
                         ReplicatedStorage.API["ToolAPI/Unequip"]:InvokeServer(PetID)
                         Pet = ReplicatedStorage.API["ToolAPI/Equip"]:InvokeServer(PetID)
                     end
                 else
+                    print("petfarm --else in ici")
                     ReplicatedStorage.API["ToolAPI/Unequip"]:InvokeServer(PetID)
                     Pet = ReplicatedStorage.API["ToolAPI/Equip"]:InvokeServer(PetID)
                 end
                 wait(1)
             end)
+
         end
     end
 )
