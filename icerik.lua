@@ -535,23 +535,24 @@ spawn(function()
                         ReplicatedStorage.API["MonitorAPI/AddAdditive"]:FireServer(v, 100)
                     end
                 end 
-                if Pet.Parent ~= Workspace.Pets then
-                    print("PET YENIDEN BASLADI")
-                    Petfarmbabo:SetState(true)
-
-                   spawn(function ()
-                    repeat wait()
-                        print("girdi repeat")
-                       
-                        Petfarmbabo:SetState(true)
-                        print(Petfarmbabo:GetState())
-                    until  (Petfarmbabo:GetState()~=false)
-                   end)
-          
-
-                end
+              
             end
         )
+        if Pet.Parent ~= Workspace.Pets then
+            print("PET YENIDEN BASLADI")
+            Petfarmbabo:SetState(true)
+
+           spawn(function ()
+            repeat wait()
+                print("girdi repeat")
+               
+                Petfarmbabo:SetState(true)
+                print(Petfarmbabo:GetState())
+            until  (Petfarmbabo:GetState()~=false)
+           end)
+
+        end
+
         end 
     end
 )
