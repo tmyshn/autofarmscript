@@ -1067,7 +1067,7 @@ RunService.RenderStepped:connect(
 
     while wait() do
 
-            pcall(function()
+        local success, errorMessage = pcall(function()
                 print("suanda pet farm calisti")
                 local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:FindFirstChildWhichIsA("Frame")
                 if Ailment then
@@ -1090,6 +1090,9 @@ RunService.RenderStepped:connect(
                 end
                 wait(1)
             end)
+
+            print(success)
+            print(errorMessage)
 
         
 
