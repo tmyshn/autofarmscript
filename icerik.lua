@@ -527,7 +527,7 @@ if not Settings.BabyFarm then
     ReplicatedStorage.API["TeamAPI/ChooseTeam"]:InvokeServer("Parents", true)
 end 
 spawn(function()
-    while wait(50) and Settings.BabyFarm do  -- normali bos wait edits tag
+    while wait(20) and Settings.BabyFarm do  -- normali bos wait edits tag
         pcall(
             function()
                 for i,v in pairs(Tasks) do
