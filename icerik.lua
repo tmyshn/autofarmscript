@@ -515,8 +515,9 @@ local Section3 = Tab2:CreateSection("Menu")
 local Section4 = Tab2:CreateSection("Background")
 --local Section5 = Tab2:CreateSection("Misc")
 local Petfarmbabo;
+local Toggle1;
 -------------
-local Toggle1 = Section1:CreateToggle("AutoFarm Baby", Settings.BabyFarm, function(State)
+Toggle1 = Section1:CreateToggle("AutoFarm Baby", Settings.BabyFarm, function(State)
 Settings.BabyFarm = State
 spawn(function()
 
@@ -536,8 +537,9 @@ spawn(function()
                     end
                 end 
 
-                if Pet.Parent ~= Workspace.Pets then
+                if not Settings.PetFarm then
                     print("PET YENIDEN BASLADI")
+                                       
                     Petfarmbabo:SetState(true)
                     Toggle1:SetState(false);
                     wait(1)
@@ -546,7 +548,8 @@ spawn(function()
                   --[[ spawn(function ()
                     repeat wait()
                         print("girdi repeat")
-                       
+                       ReplicatedStorage.API["ToolAPI/Unequip"]:InvokeServer(PetID)
+                    Pet = ReplicatedStorage.API["ToolAPI/Equip"]:InvokeServer(PetID)
                         Petfarmbabo:SetState(true)
                         print(Petfarmbabo:GetState())
                     until  (Petfarmbabo:GetState()~=false)
