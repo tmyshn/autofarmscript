@@ -813,7 +813,7 @@ spawn(
 )
 
 end)
-local AilmentFurnitues = {}
+
 
  --[[
 
@@ -846,8 +846,11 @@ end)
 
 
 spawn(function ()
+    
     wait(10)
     
+    while true do
+
 RunService.RenderStepped:connect(
     function()
       
@@ -860,7 +863,7 @@ RunService.RenderStepped:connect(
     end
 )
 
-
+local AilmentFurnitues = {}
 
 if not Settings.PetFarm then
     Player.Character:FindFirstChildWhichIsA("Humanoid"):ChangeState("Jumping")
@@ -1078,14 +1081,14 @@ spawn(
                     end
                 end
                 if Pet and wait() then
-                 --   print("petfarm --ilk if in ici")
+                    print("petfarm --ilk if in ici")
                     if Pet.Parent ~= Workspace.Pets then
-                      --  print("petfarm --ikinci if in ici")
+                        print("petfarm --ikinci if in ici")
                         ReplicatedStorage.API["ToolAPI/Unequip"]:InvokeServer(PetID)
                         Pet = ReplicatedStorage.API["ToolAPI/Equip"]:InvokeServer(PetID)
                     end
                 else
-                   -- print("petfarm --else in ici")
+                    print("petfarm --else in ici")
                     ReplicatedStorage.API["ToolAPI/Unequip"]:InvokeServer(PetID)
                     Pet = ReplicatedStorage.API["ToolAPI/Equip"]:InvokeServer(PetID)
                 end
@@ -1095,7 +1098,23 @@ spawn(
         end
     end
 )
+
+    wait(50) print("yenidenexec")
+    end
+
 end)
+
+
+
+--[[spawn(function ()
+    
+    while true and wait(50) do
+        if Pet.Parent ~= Workspace.Pets then
+            print("kontrol noktasi")
+           Tumay()
+        end
+    end 
+end) ]]--
 
 
 local Dropdown = Section1:CreateDropdown("Pets", List, function(Name)
