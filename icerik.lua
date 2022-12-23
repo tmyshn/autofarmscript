@@ -527,7 +527,7 @@ if not Settings.BabyFarm then
     ReplicatedStorage.API["TeamAPI/ChooseTeam"]:InvokeServer("Parents", true)
 end 
 spawn(function()
-    while wait(20) and Settings.BabyFarm do  -- normali bos wait edits tag
+    while wait(10) and Settings.BabyFarm do  -- normali bos wait edits tag
         pcall(
             function()
                 for i,v in pairs(Tasks) do
@@ -535,27 +535,32 @@ spawn(function()
                         ReplicatedStorage.API["MonitorAPI/AddAdditive"]:FireServer(v, 100)
                     end
                 end 
-              
+
+                if Pet.Parent ~= Workspace.Pets then
+                    print("PET YENIDEN BASLADI")
+                    Petfarmbabo:SetState(true)
+                    Toggle1:SetState(false);
+                    wait(1)
+                    Toggle1:SetState(true);
+
+                  --[[ spawn(function ()
+                    repeat wait()
+                        print("girdi repeat")
+                       
+                        Petfarmbabo:SetState(true)
+                        print(Petfarmbabo:GetState())
+                    until  (Petfarmbabo:GetState()~=false)
+                   end) ]]--        
+
+                end
             end
         )
-      
-        baklo()
-
         end 
     end
 )
 end)
 end)
 
-function baklo ()
-    
-    if Pet.Parent ~= Workspace.Pets then
-        print("PET YENIDEN BASLADI")
-        Petfarmbabo:SetState(true)
-   
-
-    end
-end
 
 
 local Toggle2 = Section1:CreateToggle("CPU Usage Improver", Settings.Render, function(State)
