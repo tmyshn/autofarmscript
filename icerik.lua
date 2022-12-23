@@ -1001,13 +1001,14 @@ spawn(
               --  local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:FindFirstChildWhichIsA("Frame")
               -- local Name = Ailment.Name
               local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments
-                if Ailment then
+               
+              print(Ailment)
                    for key, value in pairs(Ailment) do
                         
                        print(value.Name)
                     
                    end
-                end
+              
                 if Pet and wait() then
                     if Pet.Parent ~= Workspace.Pets then
                         ReplicatedStorage.API["ToolAPI/Unequip"]:InvokeServer(PetID)
