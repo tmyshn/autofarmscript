@@ -538,13 +538,8 @@ spawn(function()
               
             end
         )
-        if Pet.Parent ~= Workspace.Pets then
-            print("PET YENIDEN BASLADI")
-            Petfarmbabo:SetState(true)
-       
-           
-
-        end
+      
+        baklo()
 
         end 
     end
@@ -552,6 +547,22 @@ spawn(function()
 end)
 end)
 
+function baklo ()
+    
+    if Pet.Parent ~= Workspace.Pets then
+        print("PET YENIDEN BASLADI")
+        Petfarmbabo:SetState(true)
+   
+        repeat wait()
+            print("girdi repeat")
+           
+            Petfarmbabo:SetState(true)
+            print(Petfarmbabo:GetState())
+        until  (Petfarmbabo:GetState()~=false)
+    
+
+    end
+end
 
 
 local Toggle2 = Section1:CreateToggle("CPU Usage Improver", Settings.Render, function(State)
