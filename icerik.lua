@@ -1000,7 +1000,7 @@ spawn(
             pcall(function()
               --  local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:FindFirstChildWhichIsA("Frame")
               -- local Name = Ailment.Name
-              local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments
+              local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:GetChildren()
                
               print(Ailment)
                    for key, value in pairs(Ailment) do
