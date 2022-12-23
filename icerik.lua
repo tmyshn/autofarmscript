@@ -1001,14 +1001,17 @@ spawn(
               --  local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:FindFirstChildWhichIsA("Frame")
               -- local Name = Ailment.Name
                Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:GetChildren()
+               print(Ailment)
                 if Ailment then
                    for key, value in pairs(Ailment) do
                         
                         if value.Name ~= "bored" or "camping" or "hot_spring" or "school" or "adoption_party" or "salon" or "pizza_party" or "UIListLayout" then
+                            print(value.Name+" olarak giris yaptı")
                             if a[Name] and wait() then
                                 a[Name](Ailment)
                                 print(value.Name)
                                 print("kiriliyor")
+                                wait(1)
                                 break
                             end
                         end
