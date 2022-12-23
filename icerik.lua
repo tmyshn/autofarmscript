@@ -553,13 +553,6 @@ function baklo ()
         print("PET YENIDEN BASLADI")
         Petfarmbabo:SetState(true)
    
-        repeat wait()
-            print("girdi repeat")
-           
-            Petfarmbabo:SetState(true)
-            print(Petfarmbabo:GetState())
-        until  (Petfarmbabo:GetState()~=false)
-    
 
     end
 end
