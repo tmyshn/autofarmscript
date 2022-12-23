@@ -537,28 +537,6 @@ spawn(function()
                     end
                 end 
 
-                if not Settings.PetFarm then
-                    print("PET YENIDEN BASLADI")
-                                       
-                    Petfarmbabo:SetState(true)
-                    Settings.PetFarm=true
-                    Settings.BabyFarm=false
-                    wait(1)
-                    Settings.BabyFarm=true
-                    
-                
-
-                  --[[ spawn(function ()
-                    repeat wait()
-                        print("girdi repeat")
-                       ReplicatedStorage.API["ToolAPI/Unequip"]:InvokeServer(PetID)
-                    Pet = ReplicatedStorage.API["ToolAPI/Equip"]:InvokeServer(PetID)
-                        Petfarmbabo:SetState(true)
-                        print(Petfarmbabo:GetState())
-                    until  (Petfarmbabo:GetState()~=false)
-                   end) ]]--        
-
-                end
             end
         )
         end 
@@ -837,9 +815,35 @@ spawn(
 end)
 local AilmentFurnitues = {}
 
+ --[[
+
+if not Settings.PetFarm then
+    print("PET YENIDEN BASLADI")
+                       
+    Petfarmbabo:SetState(true)
+    Settings.PetFarm=true
+    
+    
+
+
+  spawn(function ()
+    repeat wait()
+        print("girdi repeat")
+       ReplicatedStorage.API["ToolAPI/Unequip"]:InvokeServer(PetID)
+    Pet = ReplicatedStorage.API["ToolAPI/Equip"]:InvokeServer(PetID)
+        Petfarmbabo:SetState(true)
+        print(Petfarmbabo:GetState())
+    until  (Petfarmbabo:GetState()~=false)
+   end)   
+
+end]]--      
 
 Petfarmbabo = Section1:CreateToggle("PetFarm", Settings.PetFarm, function(State)
-Settings.PetFarm = State
+Settings.PetFarm = true
+
+
+end)
+
 
 
 RunService.RenderStepped:connect(
@@ -1089,7 +1093,8 @@ spawn(
         end
     end
 )
-end)
+
+
 local Dropdown = Section1:CreateDropdown("Pets", List, function(Name)
 	Settings.Key = PetsShow[Name]
 end)
