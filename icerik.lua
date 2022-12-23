@@ -1051,7 +1051,6 @@ a = {
     end
 }
     
-    while true do
 
 RunService.RenderStepped:connect(
     function()
@@ -1066,10 +1065,7 @@ RunService.RenderStepped:connect(
 )
 
 
-if not Settings.PetFarm then
-    Player.Character:FindFirstChildWhichIsA("Humanoid"):ChangeState("Jumping")
-end 
-
+    while wait() do
 
             pcall(function()
                 print("suanda pet farm calisti")
