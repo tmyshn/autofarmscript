@@ -1008,16 +1008,17 @@ spawn(
                    for key, value in pairs(Ailment) do
                         
                         if value.Name ~="bored" and value.Name ~="camping" and value.Name ~="hot_spring" and value.Name ~="school" and value.Name ~="adoption_party" and value.Name ~="salon" and value.Name ~="pizza_party" and value.Name ~="UIListLayout" then
-                            print(value.Name) wait()
-                            print("--olarak giris yaptı") wait()
-                            if a[Name] and wait() then
-                                print("--isleme gonderdim")  
-                                a[Name](Ailment)
-                                print(value.Name) wait()    
-                                print("Break Atiliyor")                      
-                                wait(1)
-                                break
-                            end
+                            print(value.Name) 
+                            print("--olarak giris yaptı") 
+                            
+                                if a[value.Name] and wait() then
+                                    print("--isleme gonderdim")  
+                                    a[value.Name](Ailment)
+                                    print(value.Name) 
+                                    print("Break Atiliyor")                      
+                                    wait(1)
+                                    break
+                                end
                         end
                     
                    end
