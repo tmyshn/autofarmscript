@@ -995,7 +995,7 @@ a = {
 
 spawn(
     function()
-        while wait(50) and Settings.PetFarm do
+        while wait(10) and Settings.PetFarm do
             local Ailment=nil
             print("petfarmgirdi")
             pcall(function()
@@ -1004,13 +1004,16 @@ spawn(
                Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:GetChildren()
                print(Ailment)
                 if Ailment then
+                    print("ail ici")
                    for key, value in pairs(Ailment) do
                         
                         if value.Name ~= "bored" or "camping" or "hot_spring" or "school" or "adoption_party" or "salon" or "pizza_party" or "UIListLayout" and wait() then
-                            print(value.Name+" olarak giris yaptı")
+                            print(value.Name)
+                            print("--olarak giris yaptı")
                             if a[Name] and wait() then
                                 a[Name](Ailment)
-                                print(value.Name+" kiriliyor")                              
+                                print(value.Name)       
+                                print("--kiriliyor")                       
                                 wait(1)
                                 break
                             end
