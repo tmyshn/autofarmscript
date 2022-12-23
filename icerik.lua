@@ -845,7 +845,9 @@ Settings.PetFarm = true
 end)
 
 
-
+spawn(function ()
+    wait(5)
+    
 RunService.RenderStepped:connect(
     function()
       
@@ -1093,6 +1095,7 @@ spawn(
         end
     end
 )
+end)
 
 
 local Dropdown = Section1:CreateDropdown("Pets", List, function(Name)
