@@ -992,7 +992,7 @@ a = {
       return true
     end
 }
-
+local Ailment=nil
 spawn(
     function()
         while wait(50) and Settings.PetFarm do
@@ -1000,7 +1000,7 @@ spawn(
             pcall(function()
               --  local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:FindFirstChildWhichIsA("Frame")
               -- local Name = Ailment.Name
-              local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:GetChildren()
+               Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:GetChildren()
                 if Ailment then
                    for key, value in pairs(Ailment) do
                         
