@@ -872,7 +872,7 @@ a = {
                     )
                 end
             )
-            wait(15)
+            wait(10)
         end
 
         while wait() do
@@ -951,7 +951,7 @@ a = {
                     )
                 end
             )
-            wait(15)
+            wait(10)
         end
 
         while wait() do
@@ -965,44 +965,55 @@ a = {
         end
     end,
     ["pizza_party"] = function(c)
-       
+        return true
     end,
     ["salon"] = function(c)
-       
+        return true
     end,
     ["sick"] = function(c)
         ReplicatedStorage.API["MonitorAPI/HealWithDoctor"]:FireServer()
         repeat
-            wait()
+            wait(2)
         until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
     end,
     ["adoption_party"] = function(c)
-     
+        return true
     end,
     ["school"] = function(c)
-      
+        return true
     end,
     ["hot_spring"] = function(c)
-      
+        return true
     end,
     ["camping"] = function(c)
-     
+        return true
     end,
     ["bored"] = function(c)
-      
+      return true
     end
 }
 
 spawn(
     function()
         while wait(50) and Settings.PetFarm do
+            print("petfarmgirdi")
             pcall(function()
-                local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:FindFirstChildWhichIsA("Frame")
+              --  local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:FindFirstChildWhichIsA("Frame")
+              -- local Name = Ailment.Name
+              local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments
                 if Ailment then
-                    local Name = Ailment.Name
-                    if a[Name] and wait() then
-                        a[Name](Ailment)
-                    end
+                   for key, value in pairs(Ailment) do
+                        
+                        if value.Name ~= "bored" or "camping" or "hot_spring" or "school" or "adoption_party" or "salon" or "pizza_party" or "UIListLayout" then
+                            if a[Name] and wait() then
+                                a[Name](Ailment)
+                                print(value.Name)
+                                print("kırılıyor")
+                                break
+                            end
+                        end
+                    
+                   end
                 end
                 if Pet and wait() then
                     if Pet.Parent ~= Workspace.Pets then
