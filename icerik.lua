@@ -872,7 +872,7 @@ a = {
                     )
                 end
             )
-            wait(10)
+            wait(5)
         end
 
         while wait() do
@@ -951,7 +951,7 @@ a = {
                     )
                 end
             )
-            wait(10)
+            wait(5)
         end
 
         while wait() do
@@ -992,10 +992,11 @@ a = {
       return true
     end
 }
-local Ailment=nil
+
 spawn(
     function()
         while wait(50) and Settings.PetFarm do
+            local Ailment=nil
             print("petfarmgirdi")
             pcall(function()
               --  local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:FindFirstChildWhichIsA("Frame")
@@ -1005,12 +1006,11 @@ spawn(
                 if Ailment then
                    for key, value in pairs(Ailment) do
                         
-                        if value.Name ~= "bored" or "camping" or "hot_spring" or "school" or "adoption_party" or "salon" or "pizza_party" or "UIListLayout" then
+                        if value.Name ~= "bored" or "camping" or "hot_spring" or "school" or "adoption_party" or "salon" or "pizza_party" or "UIListLayout" and wait() then
                             print(value.Name+" olarak giris yaptı")
                             if a[Name] and wait() then
                                 a[Name](Ailment)
-                                print(value.Name)
-                                print("kiriliyor")
+                                print(value.Name+" kiriliyor")                              
                                 wait(1)
                                 break
                             end
