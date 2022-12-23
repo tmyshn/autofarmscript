@@ -984,37 +984,27 @@ a = {
         GoToStore("PizzaShop")
         Player.Character.HumanoidRootPart.CFrame =
             Workspace.Interiors:FindFirstChildWhichIsA("Model").PrimaryPart.CFrame:ToWorldSpace(CFrame.new(0, 0, -6))
-        repeat
-            wait()
-        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
+        wait(30)
     end,
     ["salon"] = function(c)
         GoToStore("Salon")
         Player.Character.HumanoidRootPart.CFrame =
             Workspace.Interiors:FindFirstChildWhichIsA("Model").PrimaryPart.CFrame:ToWorldSpace(CFrame.new(0, 0, -6))
-        repeat
-            wait()
-        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
+            wait(30)
     end,
     ["sick"] = function(c)
         ReplicatedStorage.API["MonitorAPI/HealWithDoctor"]:FireServer()
-        repeat
-            wait()
-        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
+        wait(30)
     end,
     ["adoption_party"] = function(c)
         GoToStore("Nursery")
-        repeat
-            wait()
-        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
+        wait(30)
     end,
     ["school"] = function(c)
         GoToStore("School")
         Player.Character.HumanoidRootPart.CFrame =
             Workspace.Interiors.School.BuyIndicators["teachers_apple"].CFrame * CFrame.new(0, 0, 0)
-        repeat
-            wait()
-        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
+            wait(30)
     end,
     ["hot_spring"] = function(c)
         GoToMainMap()
@@ -1025,18 +1015,14 @@ a = {
         )
         wait()
 
-        repeat
-            wait()
-        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
+        wait(30)
     end,
     ["camping"] = function(c)
         GoToMainMap()
 
         Player.Character.HumanoidRootPart.CFrame =
              CFrame.new(Workspace:WaitForChild("StaticMap"):WaitForChild("Campsite"):WaitForChild("CampsiteOrigin").Position + Vector3.new(0,5,0))
-        repeat
-            wait()
-        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
+             wait(30)
     end,
     ["bored"] = function(c)
         GoToMainMap()
@@ -1045,9 +1031,7 @@ a = {
             Workspace:WaitForChild("StaticMap"):WaitForChild("Park"):WaitForChild("BoredAilmentTarget").Position +
                 Vector3.new(0, 4, 0)
         )
-        repeat
-            wait()
-        until c.Parent ~= Player.PlayerGui.AilmentsMonitorApp.Ailments
+        wait(30)
     end
 }
     
@@ -1095,7 +1079,7 @@ RunService.RenderStepped:connect(
         
 
 
-    wait(30) print("yenidenexec")
+    wait(40) print("yenidenexec")
     end
 
 end)
