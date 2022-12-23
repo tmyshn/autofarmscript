@@ -921,7 +921,7 @@ a = {
                 "__Enum_PetObjectCreatorType_2",
                 {["unique_id"] = Apple}
             )
-            wait(2)
+            wait(5)
             ReplicatedStorage.API["PetAPI/ConsumeFoodItem"]:FireServer(Apple)
         end
     end,
@@ -944,7 +944,7 @@ a = {
             "__Enum_PetObjectCreatorType_2",
             {["unique_id"] = Tea}
         )
-        wait(2)
+        wait(5)
         ReplicatedStorage.API["PetAPI/ConsumeFoodItem"]:FireServer(Tea)
     end,
     ["dirty"] = function(c)
@@ -967,7 +967,7 @@ a = {
                     )
                 end
             )
-              wait(2)
+              wait(5)
         end
 
         while wait() do
@@ -1067,7 +1067,7 @@ RunService.RenderStepped:connect(
 
     while wait() do
 
-        local success, errorMessage = pcall(function()
+        spawn(pcall(function()
                 print("suanda pet farm calisti")
                 local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:FindFirstChildWhichIsA("Frame")
                 if Ailment then
@@ -1090,10 +1090,8 @@ RunService.RenderStepped:connect(
                 end
                 wait(1)
             end)
-
-            print(success)
-            print(errorMessage)
-
+        )
+        
         
 
 
