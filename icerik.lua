@@ -541,9 +541,8 @@ spawn(function()
                     print("PET YENIDEN BASLADI")
                                        
                     Petfarmbabo:SetState(true)
-                    Toggle1:SetState(false);
-                    wait(1)
-                    Toggle1:SetState(true);
+                    Settings.PetFarm=true
+                
 
                   --[[ spawn(function ()
                     repeat wait()
