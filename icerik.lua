@@ -1008,7 +1008,7 @@ spawn(
                             if a[Name] and wait() then
                                 a[Name](Ailment)
                                 print(value.Name)
-                                print("kırılıyor")
+                                print("kiriliyor")
                                 break
                             end
                         end
