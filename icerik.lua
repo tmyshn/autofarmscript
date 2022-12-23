@@ -886,7 +886,7 @@ a = {
                     )
                 end
             )
-            wait(20)
+            wait(2)
         end
 
         while wait() do  --normali bos edits tag
@@ -967,7 +967,7 @@ a = {
                     )
                 end
             )
-              wait(20)
+              wait(2)
         end
 
         while wait() do
