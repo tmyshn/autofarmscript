@@ -999,7 +999,7 @@ spawn(
             local Ailment=nil
             print("petfarmgirdi")
             pcall(function()
-              --  local Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:FindFirstChildWhichIsA("Frame")
+               local Ailkontrol = Player.PlayerGui.AilmentsMonitorApp.Ailments:FindFirstChildWhichIsA("Frame")
               -- local Name = Ailment.Name
                Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:GetChildren()
                print(Ailment)
@@ -1013,7 +1013,7 @@ spawn(
                             
                                 if a[value.Name] and wait() then
                                     print("--isleme gonderdim")  
-                                    a[value.Name](Ailment)
+                                    a[value.Name](Ailkontrol)
                                     print(value.Name) 
                                     print("Break Atiliyor")                      
                                     wait(1)
