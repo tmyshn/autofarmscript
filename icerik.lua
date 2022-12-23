@@ -995,7 +995,7 @@ a = {
 
 spawn(
     function()
-        while wait(10) and Settings.PetFarm do
+        while wait(50) and Settings.PetFarm do
             local Ailment=nil
             print("petfarmgirdi")
             pcall(function()
@@ -1008,14 +1008,11 @@ spawn(
                    for key, value in pairs(Ailment) do
                         
                         if value.Name ~="bored" and value.Name ~="camping" and value.Name ~="hot_spring" and value.Name ~="school" and value.Name ~="adoption_party" and value.Name ~="salon" and value.Name ~="pizza_party" and value.Name ~="UIListLayout" then
-                            print(value.Name) 
-                            print("--olarak giris yaptı") 
-                            
+                            print(value.Name," --olarak giris yaptı")                                                  
                                 if a[value.Name] and wait() then
                                     print("--isleme gonderdim")  
-                                    a[value.Name](Ailkontrol)
-                                    print(value.Name) 
-                                    print("Break Atiliyor")                      
+                                    a[value.Name](Ailkontrol) wait()
+                                    print(value.Name,"-Break Atiliyor") 
                                     wait(1)
                                     break
                                 end
