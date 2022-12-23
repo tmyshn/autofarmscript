@@ -839,7 +839,7 @@ if not Settings.PetFarm then
 end]]--      
 
 Petfarmbabo = Section1:CreateToggle("PetFarm", Settings.PetFarm, function(State)
-Settings.PetFarm = State
+Settings.PetFarm = true
 
 
 end)
