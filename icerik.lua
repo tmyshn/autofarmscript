@@ -1004,14 +1004,7 @@ spawn(
                 if Ailment then
                    for key, value in pairs(Ailment) do
                         
-                        if value.Name ~= "bored" or "camping" or "hot_spring" or "school" or "adoption_party" or "salon" or "pizza_party" or "UIListLayout" then
-                            if a[Name] and wait() then
-                                a[Name](Ailment)
-                                print(value.Name)
-                                print("kiriliyor")
-                                break
-                            end
-                        end
+                       print(value.Name)
                     
                    end
                 end
