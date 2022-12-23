@@ -542,6 +542,10 @@ spawn(function()
                                        
                     Petfarmbabo:SetState(true)
                     Settings.PetFarm=true
+                    Settings.BabyFarm=false
+                    wait(1)
+                    Settings.BabyFarm=true
+                    
                 
 
                   --[[ spawn(function ()
