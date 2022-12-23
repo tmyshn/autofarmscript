@@ -839,14 +839,14 @@ if not Settings.PetFarm then
 end]]--      
 
 Petfarmbabo = Section1:CreateToggle("PetFarm", Settings.PetFarm, function(State)
-Settings.PetFarm = true
+Settings.PetFarm = State
 
 
 end)
 
 
 spawn(function ()
-    wait(5)
+    wait(10)
     
 RunService.RenderStepped:connect(
     function()
