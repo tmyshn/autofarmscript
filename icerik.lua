@@ -5,7 +5,7 @@ local Config = {
     Color = Color3.fromRGB(255, 128, 64),
     Keybind = Enum.KeyCode.RightControl
 }
-
+repeat wait() until game:IsLoaded()
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local ReplicatedFirst = game:GetService("ReplicatedFirst")
