@@ -5,7 +5,7 @@ local Config = {
     Color = Color3.fromRGB(255, 128, 64),
     Keybind = Enum.KeyCode.RightControl
 }
-repeat wait() until game:IsLoaded()
+
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local ReplicatedFirst = game:GetService("ReplicatedFirst")
@@ -62,6 +62,8 @@ if Baby.Visible then
 end 
 
 
+
+
 wait(5)
 
 local ucuncuasama=Player.PlayerGui:FindFirstChild("DialogApp")
@@ -92,7 +94,7 @@ repeat
     end
 until dailylogin and dailylogin.Visible
 
-wait(5)
+wait(3)
 
 repeat
     wait()
@@ -813,8 +815,9 @@ spawn(
 end)
 local AilmentFurnitues = {}
 
+local Petfarmbabo=nil
 
-local Petfarmbabo = Section1:CreateToggle("PetFarm", Settings.PetFarm, function(State)
+Petfarmbabo = Section1:CreateToggle("PetFarm", Settings.PetFarm, function(State)
 Settings.PetFarm = State
 
 
@@ -993,13 +996,16 @@ a = {
     end
 }
 
+local Ailment=nil
+local Ailkontrol=nil
+
 spawn(
     function()
         while wait(50) and Settings.PetFarm do
-            local Ailment=nil
+             Ailment=nil
             print("petfarmgirdi")
             pcall(function()
-               local Ailkontrol = Player.PlayerGui.AilmentsMonitorApp.Ailments:FindFirstChildWhichIsA("Frame")
+            Ailkontrol = Player.PlayerGui.AilmentsMonitorApp.Ailments:FindFirstChildWhichIsA("Frame")
               -- local Name = Ailment.Name
                Ailment = Player.PlayerGui.AilmentsMonitorApp.Ailments:GetChildren()
                print(Ailment)
@@ -1035,6 +1041,7 @@ spawn(
     end
 )
 end)
+
 local Dropdown = Section1:CreateDropdown("Pets", List, function(Name)
 	Settings.Key = PetsShow[Name]
 end)
@@ -1042,6 +1049,7 @@ end)
 
 local Toggle434 = Section1:CreateToggle("Switch Out when full grown", Settings.SwitchOutFullyGrown, function(State)
 Settings.SwitchOutFullyGrown = State
+local Pets = nil
 StarterGui:SetCore(
     "SendNotification",
     {
@@ -1054,11 +1062,11 @@ spawn(
         while Settings.SwitchOutFullyGrown do
             pcall(
                 function()
-                    wait()
+                    wait(50)  -- NORMALI SIFIR
                     repeat
                         wait()
                     until Settings.PetFarm
-                    local Pets =
+                     Pets =
                         require(ReplicatedStorage.ClientModules.Core.ClientData).get_data()[Player.Name].inventory.pets or
                         {}
                     if Pets[tostring(PetID)] then
@@ -1108,7 +1116,7 @@ end)
 
 local Toggle4832 = Section1:CreateToggle("Switch Out Eggs", Settings.SwitchOutEgg, function(State)
 Settings.SwitchOutEgg = State
-
+local Pets =nil
 StarterGui:SetCore(
     "SendNotification",
     {
@@ -1125,7 +1133,7 @@ spawn(
                     repeat
                         wait()
                     until Settings.PetFarm
-                    local Pets =
+                     Pets =
                         require(ReplicatedStorage.ClientModules.Core.ClientData).get_data()[Player.Name].inventory.pets or
                         {}
                     if Pets[tostring(PetID)] then
