@@ -670,7 +670,7 @@ a = {
         end
     end,
     ["thirsty"] = function(c)
-        ReplicatedStorage.API["ShopAPI/BuyItem"]:InvokeServer("food", "tea", {})
+         -- ReplicatedStorage.API["ShopAPI/BuyItem"]:InvokeServer("food", "tea", {}) ORJ YERI
          Foods_thirsty =
             require(ReplicatedStorage.ClientModules.Core.ClientData).get_data()[Player.Name].inventory.food or {}
         --local Tea
@@ -681,7 +681,15 @@ a = {
             end
         end
         if not Tea then
-            return
+            ReplicatedStorage.API["ShopAPI/BuyItem"]:InvokeServer("food", "tea", {})
+            Foods_thirsty = require(ReplicatedStorage.ClientModules.Core.ClientData).get_data()[Player.Name].inventory.food or {}
+            for i, v in pairs(Foods_thirsty) do
+                if v.id == "tea" then
+                    Tea = v.unique
+                    break
+                end
+            end
+           -- return
         end
 
         ReplicatedStorage.API["PetObjectAPI/CreatePetObject"]:InvokeServer(
