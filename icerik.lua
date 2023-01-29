@@ -449,7 +449,14 @@ local PetID
 local Pet
 local PetsShow = {}
 local List = {}
-
+if Player.Name ~= "reactadam10" then 
+    for i, v in pairs(require(ReplicatedStorage.ClientModules.Core.ClientData).get_data()[Player.Name].inventory.pets) do
+        local Key = tostring(v["id"]) .. " - " .. tostring(v["properties"]["age"]) .. " years old"
+        PetsShow[Key] = v
+        table.insert(List, Key)
+        table.sort(List, key)
+    end
+end
 
 UserInputService.WindowFocusReleased:Connect(
     function()
