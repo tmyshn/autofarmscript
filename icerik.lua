@@ -678,6 +678,7 @@ a = {
             )
             wait(2)
             ReplicatedStorage.API["PetAPI/ConsumeFoodItem"]:FireServer(Apple)
+            Apple=nil
         end
     end,
     ["thirsty"] = function(c)
@@ -709,6 +710,7 @@ a = {
         )
         wait(2)
         ReplicatedStorage.API["PetAPI/ConsumeFoodItem"]:FireServer(Tea)
+        Tea=nil
     end,
     ["dirty"] = function(c)
         while c.Parent == Player.PlayerGui.AilmentsMonitorApp.Ailments do          
