@@ -565,13 +565,13 @@ end)
 
 
 
-local AilmentFurnitues = {}
+
 
 local Petfarmbabo=nil
 
 Petfarmbabo = Section1:CreateToggle("PetFarm", Settings.PetFarm, function(State)
 Settings.PetFarm = State
-
+local AilmentFurnitues = {}
 
 RunService.RenderStepped:connect(
     function()
@@ -606,10 +606,6 @@ if Settings.Key then
 end
 
 
-local Foods_hungry = nil
-local Foods_thirsty = nil
-local Apple =nil
-local Tea = nil
 local a
 a = {
     ["sleepy"] = function(c)
@@ -647,6 +643,8 @@ a = {
     end,
   
     ["hungry"] = function(c)
+        local Foods_hungry = nil
+        local Apple =nil
         if Settings.PetFarm then
             --ReplicatedStorage.API["ShopAPI/BuyItem"]:InvokeServer("food", "apple", {})
             wait()
@@ -682,6 +680,8 @@ a = {
         end
     end,
     ["thirsty"] = function(c)
+        local Foods_thirsty = nil
+        local Tea = nil
          -- ReplicatedStorage.API["ShopAPI/BuyItem"]:InvokeServer("food", "tea", {}) ORJ YERI
          Foods_thirsty =
             require(ReplicatedStorage.ClientModules.Core.ClientData).get_data()[Player.Name].inventory.food or {}
@@ -773,13 +773,14 @@ a = {
     end
 }
 
-local Ailment=nil
-local Ailkontrol=nil
+
 
 spawn(
     function()
         while wait(50) and Settings.PetFarm do
-             Ailment=nil
+            local Ailment=nil
+            local Ailkontrol=nil
+             wait(2)
             print("petfarmgirdi")
             pcall(function()
             Ailkontrol = Player.PlayerGui.AilmentsMonitorApp.Ailments:FindFirstChildWhichIsA("Frame")
@@ -1069,20 +1070,6 @@ end)
 
 
 
-local TextBox1 = Section2:CreateTextBox("Fps Cap", "Only numbers", true, function(Value)
-    Settings.Fps = Value
-end)
-
-local TextBox1 = Section2:CreateTextBox("WalkSpeed", "Only numbers", true, function(Value)
-    Settings.WalkSpeed = Value
-end)
-local TextBox1 = Section2:CreateTextBox("JumpPower", "Only numbers", true, function(Value)
-    Settings.JumpPower = Value
-end)
-
-local TextBox1 = Section2:CreateTextBox("Seconds Until ServerHop", "Only numbers", true, function(Value)
-    Settings.Seconds = Value
-end)
 
 
 
@@ -1097,43 +1084,7 @@ UserInputService.JumpRequest:connect(
 )
 end)
 
-local ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/1201for/V.G-Hub/main/Karrot-Esp"))()
-local Toggle1 = Section1:CreateToggle("Enable Esp", Settings.Esp, function(State)
-    Settings.Esp = State
-    ESP:Toggle(Settings.Esp)
-end)
-local Toggle1 = Section1:CreateToggle("Player Esp", Settings.PlayerEsp, function(State)
-    Settings.PlayerEsp = State
-    ESP.Players = Settings.PlayerEsp
-end)
-local Toggle1 = Section1:CreateToggle("Tracers Esp", Settings.Tracers, function(State)
-    Settings.Tracers = State
-    ESP.Tracers = Settings.Tracers
-end)
-local Toggle1 = Section1:CreateToggle("Name Esp", Settings.EspNames, function(State)
-    ESP.Names = Settings.EspNames
-    Settings.EspNames = State
-end)
-local Toggle1 = Section1:CreateToggle("Boxes Esp", Settings.Boxes, function(State)
-    Settings.Boxes = State
-    ESP.Boxes = Settings.Boxes
-end)
 
-local Toggle1 = Section2:CreateToggle("Invisicam", Settings.Sorry, function(State)
-Settings.Sorry = State
-if Settings.Sorry then
-    Player.DevCameraOcclusionMode = "Invisicam"
-else
-    Player.DevCameraOcclusionMode = "Zoom"
-end
-end)
-
-
-
-
-
-local Button1 = Section2:CreateButton("Rejoin", function()
-game:GetService("TeleportService"):Teleport(game.PlaceId, Player) end)
 
 
 local Button1 = Section2:CreateButton("Save Settings", function()
@@ -1146,48 +1097,8 @@ Toggle3:CreateKeybind(tostring(Config.Keybind):gsub("Enum.KeyCode.", ""), functi
 	Config.Keybind = Enum.KeyCode[Key]
 end)
 Toggle3:SetState(true)
-Section3:CreateLabel("Credits DekuDimz#7960")
-Section3:CreateLabel("Credits AlexR32#3232 Ui")
-Section3:CreateLabel("Credits Applebee")
-local Colorpicker3 = Section3:CreateColorpicker("UI Color", function(Color)
-	Window:ChangeColor(Color)
-end)
-Colorpicker3:UpdateColor(Config.Color)
 
--- credits to jan for patterns
-local Dropdown3 = Section4:CreateDropdown("Image", {"Default","Hearts","Abstract","Hexagon","Circles","Lace With Flowers","Floral"}, function(Name)
-	if Name == "Default" then
-		Window:SetBackground("2151741365")
-	elseif Name == "Hearts" then
-		Window:SetBackground("6073763717")
-	elseif Name == "Abstract" then
-		Window:SetBackground("6073743871")
-	elseif Name == "Hexagon" then
-		Window:SetBackground("6073628839")
-	elseif Name == "Circles" then
-		Window:SetBackground("6071579801")
-	elseif Name == "Lace With Flowers" then
-		Window:SetBackground("6071575925")
-	elseif Name == "Floral" then
-		Window:SetBackground("5553946656")
-	end
-end)
-Dropdown3:SetOption("Default")
 
-local Colorpicker4 = Section4:CreateColorpicker("Color", function(Color)
-	Window:SetBackgroundColor(Color)
-end)
-Colorpicker4:UpdateColor(Color3.new(1,1,1))
-
-local Slider3 = Section4:CreateSlider("Transparency",0,1,nil,false, function(Value)
-	Window:SetBackgroundTransparency(Value)
-end)
-Slider3:SetValue(0)
-
-local Slider4 = Section4:CreateSlider("Tile Scale",0,1,nil,false, function(Value)
-	Window:SetTileScale(Value)
-end)
-Slider4:SetValue(0.5)
 
 
 spawn(function()
